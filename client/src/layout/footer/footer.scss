@@ -1,0 +1,79 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+footer{
+    background-color: #e0ecdc;
+    display: flex;
+    @include MyFlex();
+    flex-wrap: wrap;
+    padding: 80px 50px;
+gap: 60px;
+    justify-content: space-around;
+    .footerLeft{
+        img{
+            max-width: 100px;
+        }
+        .inputBox{
+            width: 320px;
+            // padding:0px 0px 10px ;
+            border-bottom: 1px solid rgba(16, 99, 78, 0.9);
+            input{
+                padding: 16px ;
+                width: 75%;
+                outline: none;
+                border: none;
+                background-color: transparent;
+            }
+            input::placeholder{
+                color: #2a551b;
+            }
+            button{
+                padding:17px 23px;
+                background-color: #2a551b4b;
+                border: none;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+            button:hover{
+                background-color: #91be82;
+                transition: 0.5s;
+
+            }
+        }
+    }
+    .footerRight{
+    @include MyFlex();
+        align-items: start;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li{
+                font-size: 20px;
+                color: #326320;
+                cursor: pointer;
+
+            }
+            .line{
+                width: 0px;
+               height: 1px;
+               background-color: black;
+               transition: 0.6s;
+            }
+            li:hover{
+                .line{
+                    width: 60px;
+                   transition: 0.6s;
+                }
+            }
+        }
+    }
+}

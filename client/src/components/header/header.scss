@@ -1,0 +1,83 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+header {
+    width: 100%;
+    height: 90vh;
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+.sliderBox1{
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/sl7.jpg);
+    
+}
+.sliderBox2{
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/sl4.jpg);
+    
+}
+.sliderBox3{
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/sl1-967x725.jpg);
+    
+}
+        .sliderBox1, .sliderBox2 , .sliderBox3 {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @include MyFlex();
+            flex-direction: column;
+            gap: 10px;
+            color: rgb(16, 99, 78);
+
+            span {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 60px;
+                text-align: center;
+            }
+        }
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+                   color: rgb(16, 99, 78);
+
+    }
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+                   color: rgb(16, 99, 78);
+
+    }
+}
+@media only screen and (max-width: 762px) {
+    header {
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+            .sliderBox1, .sliderBox2 , .sliderBox3 {
+                p {
+                    padding: 0px 30px;
+                    font-size: 40px;
+                }
+            }
+        }
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+           display: none;
+        }
+        .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+           display: none;
+        }
+    }
+
+
+}

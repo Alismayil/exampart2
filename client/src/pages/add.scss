@@ -1,0 +1,62 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+
+#addPage {
+    padding: 70px;
+    background-color: #e0ecdc;
+    width: 100%;
+    @include MyFlex();
+    flex-direction: column;
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+            padding: 10px 80px 10px 10px;
+        }
+
+        button {
+            padding: 10px 80px;
+            cursor: pointer;
+        }
+        margin-bottom: 50px;
+    }
+
+    thead,
+    tbody {
+        border: 1px solid black;
+        padding: 40px;
+
+        tr {
+            width: 100%;
+
+            th,
+            td {
+                width: 320px;
+                padding: 20px;
+                border: 1px solid black;
+                button{
+                  width: 100px;
+                  height: 30px;
+                  cursor: pointer;
+                  background-color: red;
+                  border: none;
+                  color: white  ;
+                }
+            }
+
+        }
+    }
+}

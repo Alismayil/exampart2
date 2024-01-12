@@ -1,0 +1,28 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.detailPage{
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px;
+    @include MyFlex();
+    .detailBox{
+        @include MyFlex();
+        flex-direction: column;
+        gap: 2  0px;
+        img{
+            max-width: 320px;
+        }
+        p{
+            font-size: 30px;
+            color: rgb(16, 99, 78);
+        }
+    }
+  
+}

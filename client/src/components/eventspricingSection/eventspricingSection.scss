@@ -1,0 +1,80 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#eventspricingSection {
+    background-color: RED;
+    width: 100%;
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0px 80px;
+
+    .eventspricingSectionUpBox {
+        @include MyFlex();
+        flex-direction: column;
+        padding: 20px 0px;
+        gap: 10px;
+        color: rgba(16, 99, 78, 0.9);
+
+        span {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 55px;
+            text-align: center;
+        }
+    }
+
+    .eventspricingSectionDownBox {
+        margin-top: 30px;
+        @include MyFlex();
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        .eventspricingBox {
+            color: #10634ee6;
+            width: 330px;
+            background-color: #fef1e6;
+            border: 1px solid #10634ee6;
+            padding: 50px 30px 90px;
+            @include MyFlex();
+            text-align: center;
+            gap: 28px;
+            flex-direction: column;
+
+            div {
+                display: flex;
+                align-items: end;
+                gap: 10px;
+
+                p {
+                    font-size: 33px;
+                }
+            }
+
+            p {
+                font-size: 30px;
+            }
+
+            span {
+                font-size: 17px;
+            }
+
+            button {
+                margin-top: 10px;
+                padding: 14px 40px;
+                border: none;
+                background-color: #d8e3d5;
+                color: #10634ee6;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.wishlistPage{
+    @include MyFlex();
+    flex-wrap: wrap;
+    gap: 40px;
+    padding:175px 0px;
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .wishlistCart{
+        @include MyFlex();
+        flex-direction: column;
+        gap: 10px;
+        p{
+            font-size: 20px
+        }
+        img{
+            max-width: 320px;
+        }
+        button{
+            background-color: transparent;
+            color: #10634e;
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #10634e;
+            transition: 0.7s;
+        }
+        button:hover{
+            background-color: #10634e;
+            color: white;
+            transition: 0.7s;
+
+        }
+    }
+}

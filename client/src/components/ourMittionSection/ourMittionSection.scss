@@ -1,0 +1,111 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#ourMittionSection {
+    background-color: red;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/background2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include MyFlex();
+
+    .outMittionBox {
+        width: 1100px;
+        height: 500px;
+        display: flex;
+
+        .outMittionLeftBox {
+            background: #1b745e;
+            width: 50%;
+            height: 100%;
+            @include MyFlex();
+            color: white;
+            flex-direction: column;
+            gap: 10px;
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                p {
+                    font-size: 50px;
+                }
+
+                span {
+                    font-size: 17px;
+                    max-width: 270px;
+                }
+
+                button {
+                    width: 150px;
+                    padding: 14px 40px;
+                    color: #1b745e;
+                    border: none;
+                    background-color: white;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    background-color: #d8e3d5;
+                }
+            }
+
+        }
+
+        .outMittionRightBox {
+            width: 50%;
+            height: 100%;
+            background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/b4.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+@media only screen and (max-width: 809px) {
+    #ourMittionSection {
+        .outMittionBox {
+            @include MyFlex();
+            flex-direction: column-reverse;
+        }
+    }
+}
+@media only screen and (max-width: 641px) {
+    #ourMittionSection {
+        .outMittionBox {
+            width: 100%;
+            .outMittionLeftBox {
+                width: 70%;
+                .box {
+                    p {
+                        font-size: 30px;
+                    }
+    
+                    span {
+                        font-size: 13px;
+                        max-width: 150px;
+                    }
+                    button {
+                        padding: 12px 20px;
+                    }
+    
+                    button:hover {
+                        background-color: #d8e3d5;
+                    }
+                }
+            }
+    
+            .outMittionRightBox {
+                width: 70%;
+            }
+        }
+    }
+
+}

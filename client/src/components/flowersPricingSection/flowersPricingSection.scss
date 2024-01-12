@@ -1,0 +1,81 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#flowersPricingSection {
+    padding: 50px;
+    background-image: url(https://mobirise.com/extensions/floram4/floral-studio/assets/images/background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+padding: 50px 100px;
+    .flowersPricingSectionUpbox {
+        @include MyFlex();
+        flex-direction: column;
+        color: #10634ee6;
+        ;
+
+        span {
+            font-size: 25px;
+
+        }
+
+        p {
+            font-size: 40px;
+        }
+    }
+
+    .flowersPricingSectionDownbox {
+        margin: 40px 0px;
+        @include MyFlex();
+        gap: 40px;
+        flex-wrap: wrap;
+
+        .flowersBox {
+            .flowersImageBox {
+                img {
+                    max-width: 320px;
+                }
+            }
+
+            .flowersTextBox {
+                color: #10634ee6;
+                @include MyFlex();
+
+                flex-direction: column;
+                gap: 10px;
+
+                p {
+                    font-size: 20px;
+                }
+            }
+
+            .btnsBox {
+                margin-top: 10px;
+                @include MyFlex();
+                gap: 20px;
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    background-color: white;
+                    border: none;
+                    border-radius: 50%;
+                    @include MyFlex();
+                    color: #10634ee6;
+                    font-size: 20px;
+                }
+
+                button:hover {
+                    background-color: #10634ee6;
+                    color: white;
+                }
+            }
+
+        }
+    }
+}
